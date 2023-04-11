@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+    div.content
+        div.form-header Login
+        div
+            form(action='/login' method="post")
+                div.input-container.wide
+                    label(for="email") Email Address
+                    input(type="text" name="email" id="email" required=true)
+
+                div.input-container.wide
+                    label(for="password") Password
+                    input(type="password" name="password" id="password" required=true)
+
+                button.button.primary(type="submit") Login
