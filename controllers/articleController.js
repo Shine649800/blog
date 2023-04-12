@@ -16,7 +16,7 @@ module.exports.addArticle = async function(req, res){
         intro: req.body.intro,
         image_url: req.body.image_url,
         body: req.body.body,
-        author_id: 1,
+        author_id: req.user.id,
         published_on: new Date()
     });
     res.redirect('/')
